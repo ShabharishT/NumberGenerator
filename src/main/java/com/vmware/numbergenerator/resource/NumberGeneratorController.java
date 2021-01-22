@@ -22,6 +22,9 @@ import java.util.Map;
 
 import static com.vmware.numbergenerator.constants.NumberGeneratorConstants.*;
 
+/*
+ * A REST controller class exposing APIs
+ */
 @RestController
 @RequestMapping("/api")
 public class NumberGeneratorController {

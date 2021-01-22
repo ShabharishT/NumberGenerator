@@ -3,6 +3,9 @@ package com.vmware.numbergenerator.exception;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
+/*
+ * A RuntimeException class throwing Bad request
+ */
 @ResponseStatus(value = HttpStatus.BAD_REQUEST)
 public class InvalidRequestException extends RuntimeException {
 

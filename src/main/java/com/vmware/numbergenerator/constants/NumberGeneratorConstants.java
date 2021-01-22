@@ -1,5 +1,8 @@
 package com.vmware.numbergenerator.constants;
 
+/*
+ * A class to store all constants
+ */
 public class NumberGeneratorConstants {
 
     public static final String RESULT = "result";

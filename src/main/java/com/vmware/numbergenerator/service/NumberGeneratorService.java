@@ -10,12 +10,20 @@ import java.util.concurrent.*;
 
 import static com.vmware.numbergenerator.constants.NumberGeneratorConstants.*;
 
+/*
+ * A service class introduced to
+ * 1. Retrieve status of a UUID.
+ * 2. Retrieve number sequence for a valid UUID.
+ * 3. Generate a number sequence for a single number.
+ * 4. Generate a bulk number sequence for a list of numbers using thread pool.
+ */
 @Component
 public class NumberGeneratorService {
 
-    private static final int MAX_EXECUTOR_THREADS = 2;
-
+    // A simple cache to store sequences with UUID instead of in-memory Database
     public static final Map<String, List<String>> cache = new HashMap<>();
+
+    private static final int MAX_EXECUTOR_THREADS = 2;
 
     public String getStatus(String uuid) {
         if (cache.containsKey(uuid) && !CollectionUtils.isEmpty(cache.get(uuid))) {

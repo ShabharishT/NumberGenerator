@@ -4,6 +4,9 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
+/*
+ * Bean class
+ */
 public class NumberGenerator {
 
     @NotNull
