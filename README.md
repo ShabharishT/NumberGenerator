@@ -46,7 +46,7 @@ To run the APIs, follow the below steps:
 
    Http Method: GET
  
-   URL: http://localhost:8090/api/tasks/<UUID>/status
+   URL: http://localhost:8090/api/tasks/{UUID}/status
    
    where UUID is the task ID generated.
    
@@ -56,7 +56,7 @@ To run the APIs, follow the below steps:
     
    Http Method: GET  
    
-   URL: http://localhost:8090/api/tasks/<UUID>?action=get_numlist
+   URL: http://localhost:8090/api/tasks/{UUID}?action=get_numlist
    
    where UUID is the task ID generated.
    
