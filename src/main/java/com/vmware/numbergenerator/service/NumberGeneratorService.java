@@ -5,6 +5,7 @@ import com.vmware.numbergenerator.model.NumberGenerator;
 import org.springframework.stereotype.Component;
 import org.springframework.util.CollectionUtils;
 
+import java.math.BigInteger;
 import java.util.*;
 import java.util.concurrent.*;
 
@@ -73,14 +74,17 @@ public class NumberGeneratorService {
     }
 
     private String computeGeneratedSequence(NumberGenerator bean) {
-        int goal = Integer.parseInt(bean.getGoal());
-        int step = Integer.parseInt(bean.getStep());
+
+        // BigInteger could be used if very large numbers are used
+        // as Long can hold only 64 bits
+        long goal = Long.parseLong(bean.getGoal());
+        long step = Long.parseLong(bean.getStep());
 
         if (goal < step) {
             throw new InvalidRequestException(INVALID_REQUEST_BODY);
         }
 
-        List<Integer> result = new ArrayList<>();
+        List<Long> result = new ArrayList<>();
         String sequence = "";
 
         while (goal >= 0) {

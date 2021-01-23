@@ -123,20 +123,4 @@ public class NumberGeneratorResourceTest {
             assertThat(e instanceof InvalidRequestException).isTrue();
         }
     }
-
-//    @Test
-//    public void testGetStatusWithRandomNumber() {
-//        ExecutorService executorService = Executors.newSingleThreadExecutor();
-//        Future future = executorService.submit();
-//
-//        class Task implements Runnable {
-//            private volatile boolean done = false;
-//            @Override
-//            public void run() {
-//                while(!done) {
-//
-//                }
-//            }
-//        }
-//    }
 }
