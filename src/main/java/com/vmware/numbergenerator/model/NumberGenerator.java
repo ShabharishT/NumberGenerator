@@ -5,7 +5,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 
 /*
- * Bean class
+ * NumberGenerator Bean
  */
 public class NumberGenerator {
 

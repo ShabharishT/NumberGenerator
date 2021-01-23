@@ -65,6 +65,22 @@ public class NumberGeneratorResourceTest {
     }
 
     @Test
+    public void testGenerateBulkSequenceWithLargeNumbers() {
+        List<NumberGenerator> beanList = new ArrayList<>();
+        beanList.add(new NumberGenerator("10", "2"));
+        beanList.add(new NumberGenerator("100", "3"));
+        beanList.add(new NumberGenerator("1000", "4"));
+        beanList.add(new NumberGenerator("10000", "5"));
+        beanList.add(new NumberGenerator("100000", "10"));
+        beanList.add(new NumberGenerator("1000000", "100"));
+        beanList.add(new NumberGenerator("10000000", "1000"));
+        ResponseEntity responseEntity = controller.generateBulkSequence(beanList);
+
+        assertThat(responseEntity.getStatusCodeValue()).isEqualTo(202);
+        assertThat(((ObjectNode)responseEntity.getBody()).get("task")).isNotNull();
+    }
+
+    @Test
     public void testGetStatus() {
         List<String> list = new ArrayList<>();
         list.add("{10,8,6,4,2,0}");

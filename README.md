@@ -4,11 +4,12 @@ A spring boot application that generates a sequence of numbers in the decreasing
 
 To run the APIs, follow the below steps:
 
-1. Download 'numbergenerator-0.0.1-SNAPSHOT.jar' from target folder.
-2. Java JRE must be installed in the system.
-3. Run the command 'java -jar <path where jar is located>'.
-4. Open POSTMAN (or any API client ) to launch APIs.
-5. Use the below API URL to generate a number sequence.
+1. Download 'numbergenerator-0.0.1-SNAPSHOT.jar.original' from target folder to a local folder.
+2. Remove '.original' from the file name so that it becomes a executable jar.
+3. Java JRE must be installed in the system.
+4. Run the command 'java -jar <path where jar is located>'.
+5. Open POSTMAN (or any API client ) to launch APIs.
+6. Use the below API URL to generate a number sequence.
 
    Http Method: POST
    
@@ -22,7 +23,7 @@ To run the APIs, follow the below steps:
    
    Copy task ID generated in the response body. 
    
-6. Use the below API URL to generate bulk number sequence.
+7. Use the below API URL to generate bulk number sequence.
 
    Http Method: POST
    
@@ -42,7 +43,7 @@ To run the APIs, follow the below steps:
    
    Copy task ID generated in the response body. 
    
-7. Use the below API URL to get status of the task.
+8. Use the below API URL to get status of the task.
 
    Http Method: GET
  
@@ -52,7 +53,7 @@ To run the APIs, follow the below steps:
    
    Response shows result of the task -> SUCCESS/IN_PROGRESS/ERROR
    
-8. Use the below API URL to get number sequence result.
+9. Use the below API URL to get number sequence result.
     
    Http Method: GET  
    
@@ -62,4 +63,4 @@ To run the APIs, follow the below steps:
    
    Response shows number sequence result(s).
    
-9. All required validations are handled.   
+10. All required validations are handled.   
